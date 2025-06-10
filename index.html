@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analisador de números</title>
+    <title>Exercícios Javascript</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Analisador de números</h1>
+        <h1>Média de Avaliações</h1>
+        <h3>Elaborar um programa que leia 2 notas de um aluno. Calcule e mostre a média das notas.</h3>
     </header>
 
     <section>
-        <div>  
-            <label for="">Número entre 1 e 100:</label>
-            <input type="number" placeholder="" name="num" id="fnum" min="1" max="100">
-            <input id="number" type="button" value="adicionar" onclick="adicionar()">
+        <div class="form">  
+            <label for="">Informe a 1ª nota:</label>
+            <input type="number" placeholder="De 0 à 10" name="number1" id="number1" min="1" max="10">
+            <label for="">Informe a 2ª nota:</label>
+            <input type="number" placeholder="De 0 à 10" name="number2" id="number2" min="1" max="10">
+            <input type="button" value="finalizar" onclick="finalizar()">
         </div>
-            <div>
-                <select name="lista" id="lista" size="10">
-                </select>
-                <br><input type="button" value="finalizar" onclick="finalizar()">            
-            </div>
         <div id="res">
-            Adicione números e clique em finalizar
+            Adicione suas notas e clique em finalizar
         </div>
     </section>
     <footer>

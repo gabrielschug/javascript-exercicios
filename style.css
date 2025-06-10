@@ -19,7 +19,8 @@ section{
     text-align: center;
 }
 
-.fieldset{
+
+.form{
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
@@ -50,4 +51,8 @@ select {
 
 .lista {
     width: 200px;
+}
+label{
+    display: flex;
+    justify-content: start;
 }
