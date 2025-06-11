@@ -6,27 +6,27 @@
     <title>Exercícios Javascript</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Média de Avaliações</h1>
-        <h3>Elaborar um programa que leia 2 notas de um aluno. Calcule e mostre a média das notas.</h3>
-    </header>
 
-    <section>
-        <div class="form">  
-            <label for="">Informe a 1ª nota:</label>
-            <input type="number" placeholder="De 0 à 10" name="number1" id="number1" min="1" max="10">
-            <label for="">Informe a 2ª nota:</label>
-            <input type="number" placeholder="De 0 à 10" name="number2" id="number2" min="1" max="10">
-            <input type="button" value="finalizar" onclick="finalizar()">
-        </div>
-        <div id="res">
-            Adicione suas notas e clique em finalizar
-        </div>
-    </section>
+<body>
+    <header class="cabecalho">
+        <h1  class="titulo"></h1>
+        <p class="subtitulo"></p>
+    </header>    
+
+    <main>
+        <section class="barra__lateral">
+        </section>
+        <section class="programa">
+            <div id="exercicios">
+            </div>
+            <div id="resultado">
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; GabrielSchug</p>
+        <p>&copy;GabrielSchug | Estudante de ADS</p>
     </footer>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

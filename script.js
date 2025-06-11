@@ -1,66 +1,51 @@
+// Trazendo as Entradas
+let titulo = document.querySelector('.titulo')
+let subtitulo = document.querySelector('.subtitulo')
+let exercicios = document.querySelector('#exercicios')
+let resultado = document.querySelector('#resultado')
 
-// Trazendo as Entradas 
-let num = document.querySelector('input#fnum') // Número
-let lista = document.querySelector('select#lista') // Lista
-let resultado = document.querySelector('div#resultado') // Div__Resultado
+// Título da página
+titulo.innerHTML= "Execícios de JavaScript"
+subtitulo.innerHTML = "Estes exercícios foram realizados por mim no decorrer da disciplina de Lógica de Programação, 1º semestre da faculdade.Estou disponibilizando para todos que quiserem treinar seus códigos e aprender, até mesmo colaborar com este projeto. Bons estudos!"
 
-// Array que será analisado os dados
-let valores = [] // Vetor
+// Criando DESCRIÇÃO
+let descricao = document.createElement('h3')
+descricao.setAttribute('id','descricao')
+exercicios.appendChild(descricao)
+descricao.innerHTML = 'Elaborar um programa que leia 2 notas de um aluno. <br>Calcule e mostre a média das notas.'
 
-// Verificar se o num é maior que 1 e menor que 100:
-function isNumero(n) { if(Number(n) > 0 && Number(n) < 101 ) {return true} else {return false}
-}
+// Criando RESULTADO
+let res = document.createElement('h4')
+res.setAttribute('id','res')
+resultado.appendChild(res)
+res.innerHTML = 'Informe os dados e clique em <u>Enviar</u>'
 
-// Verificar se o num não está contido no Vetor:
-function inValores(n, l) { if( valores.indexOf(Number(n)) != -1 ) {return true} else {return false}
-}
+// Criando ENTRADAS
+let label = document.createElement('p')
+exercicios.appendChild(label)
+label.innerText='Informe o valor da primeira avaliação:'
+
+let num1 = document.createElement('input')
+num1.setAttribute('type','number')
+num1.setAttribute('placeholder','Avaliação 1')
+num1.setAttribute('id','num1')
+exercicios.appendChild(num1)
 
 
-// Adicionar o num no Vetor, se passar nas condições:
-function adicionar() {
-    if (isNumero(num.value) && !inValores(num.value, valores)) {  // Se num foi valor e não está no Vetor
+let label2 = document.createElement('p')
+exercicios.appendChild(label2)
+label2.innerText='Informe o valor da segunda avaliação:'
 
-        valores.push(Number(num.value)) // Adiciona o num no Vetor
-        
-        let adicionarOpcao = document.createElement('option') // Criar elemento Option
-        adicionarOpcao.text = `Valor ${num.value} adicionado` // Incluir texto no Option
-        lista.appendChild(adicionarOpcao) // Adicionar option na lista
-        
-    } else{
-        alert(`[ERRO] Valor Adicionado Inválido!`) // se não... Informa erro
-        
-    }
-    res.innerHTML = ""
-    num.value = "" // apagar último valor do input
-    num.focus() // leva o cursor pra dentro do input
-}
+let num2 = document.createElement('input')
+num2.setAttribute('type','number')
+num2.setAttribute('placeholder','Avaliação 2')
+num2.setAttribute('id','num1')
+exercicios.appendChild(num2)
 
-function finalizar(){
-    if (valores.length == 0) { 
-        alert("[ERRO] Adicione números antes de Finalizar")
-    } else{
-        let cont = valores.length
+let quebradelinha = document.createElement('p')
+exercicios.appendChild(quebradelinha)
 
-        let soma = 0
-        let maior = valores[0]
-        let menor = valores[0]
-        for (let posicao in valores){
-            soma += valores[posicao]
-
-            if (valores[posicao] > maior)
-                maior = valores[posicao]
-
-            if (valores[posicao] < menor)
-                menor = valores[posicao]
-        }
-
-        let media = (soma / cont)
-        
-        res.innerHTML = ""
-        res.innerHTML = `Ao todo, temos ${cont} números cadastrados.<br>` +
-        `O maior valor informado foi ${maior}<br>` + 
-        `O menor valor informado foi ${menor}.<br>` +
-        `Somando todos valores temos ${soma}.<br>` + 
-        `A média dos valores digitados é ${media}.`
-    }
-}
+let enviar = document.createElement('button')
+enviar.setAttribute('onclick','enviar()')
+exercicios.appendChild(enviar)
+enviar.innerHTML='<b>ENVIAR</b>'
