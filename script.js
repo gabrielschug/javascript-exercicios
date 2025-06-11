@@ -49,3 +49,9 @@ let enviar = document.createElement('button')
 enviar.setAttribute('onclick','enviar()')
 exercicios.appendChild(enviar)
 enviar.innerHTML='<b>ENVIAR</b>'
+
+function enviar (){
+    if (num1.value.length == 0 || num2.value.length == 0) {
+        alert('[ERRO] Verifique os dados!') 
+    } else {}
+}
