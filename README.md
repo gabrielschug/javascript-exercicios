@@ -1,2 +1,2 @@
 # javascript-exercicios
-Todos exercícios da matéria de Lógica de Programação, em Javascript, HTML & CSS
+[EM ANDAMENTO] Todos exercícios da matéria de Lógica de Programação, em Javascript, HTML & CSS
